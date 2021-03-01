@@ -1,12 +1,49 @@
-# Getting Started with Create React App
+# CountryBox
+It is a web application that allows you to search for a specific country by name and obtain information about it. Plus, you can edit this information if it is misleading.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## CountryBox Layout
+The figures below show the final layout of the site
 
-## Available Scripts
+### CountryBox landing page
+![CountryBox view #1](/readme-img1.png)
 
-In the project directory, you can run:
+### CountryBox search results page
+![CountryBox view #2](readme-img2.png)
 
-### `npm start`
+## CountryBox Edit results page
+![CountryBox view #2](readme-img3.png)
+
+
+## Deploy
+[CountryBox deploy link](https://soft-plan-task-front-end.herokuapp.com)
+
+## API
+For the BackeEnd the public API was used [Graph countries](https://github.com/lennertVanSever/graphcountries)
+
+## Test
+- [ ] Create a list of cards to display the countries showing the flag, name and capital of it;
+- [ ] Enable the user to search for countries;
+- [ ] In the list, the user can go to the country details page and see a more complete list of information (flag, name, capital, area, population and top-level domain);
+- [ ]  Create a form to edit the data of a country (saving only on the client side);
+
+## Project
+ 
+## How to use this aplication
+
+### Clone Repository
+
+```bash
+# Clone this repository
+$ git clone https://github.com/abraaovilanova/soft-plan-task-front-end
+# Access the project folder
+$ cd soft-plan-task-front-end
+# Install the dependencies
+$ npm install
+# Start the project
+$ npm start
+```
+
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,57 +51,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with Love :gift_heart: by Abraão Vila Nova in Recife
