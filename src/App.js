@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { COUNTRYS } from './service/queries'
+import { contriesItemsVar } from './service'
+import { useQuery } from '@apollo/client'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import Home from './components/Home/Home'
+import Routes from './routes/Routes'
+import './App.css'
+import Loader from './views/Loader'
 
 function App() {
+  const { loading, error, data } = useQuery(COUNTRYS);
+  if (loading) return <Loader />
+  if (error) return `Error! ${error.message}`
+  contriesItemsVar(data.Country)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Home />
+      </Routes>
     </div>
-  );
+  )
 }
 
 export default App;

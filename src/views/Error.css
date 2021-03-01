@@ -1,0 +1,18 @@
+.error-page{
+    min-width: 400px;
+    width: 50%;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+
+}
+
+.error-page a {
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(123,74,145);
+}

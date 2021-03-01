@@ -1,0 +1,9 @@
+.about-page {
+    background-color: #eee;
+    margin: auto;
+    width: 60%;
+    min-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}

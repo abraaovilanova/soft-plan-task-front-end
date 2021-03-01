@@ -1,0 +1,16 @@
+.form{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    color: rgb(115, 58, 141);
+    background-color: #fff;
+    width: 30%;
+    min-width: 300px;
+    border-radius: 5px;
+    border-bottom: 10px solid rgb(115, 58, 141);
+    border-right: 10px solid rgb(115, 58, 141);
+}
