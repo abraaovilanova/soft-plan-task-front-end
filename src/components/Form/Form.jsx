@@ -42,7 +42,7 @@ export default function Form ({ country, edit }) {
 		{ label: "Flag", attrs: { name: "flag", type: "text", value: fields.flag } },
 		{ label: "Name", attrs: { name: "name", type: "text", value: fields.name } },
 		{ label: "Capital", attrs: { name: "capital", type: "text", value: fields.capital } },
-		{ label: "Area km²", attrs: { name: "area", type: "number", value: fields.area } },
+		{ label: "Area [km²]", attrs: { name: "area", type: "number", value: fields.area } },
 		{ label: "Population", attrs: { name: "population", type: "number", value: fields.population } },
 		{ label: "Top Level Domains", attrs: { name: "topLevelDomains", type: "text", value: fields.topLevelDomains } }
 
@@ -51,16 +51,23 @@ export default function Form ({ country, edit }) {
 
 	return (
 
-		<form onSubmit={ submit }>
+		<form onSubmit={ submit } data-testid="edit">
 			{
 				formModel.map(( item, i ) => 
 					<div className="form-row" key={i}>
 						<label className="form-label"htmlFor={item.attrs.name}>{ item.label }:</label>
-                        <input className="form-input" type="text" value={item.attrs.value} id={item.attrs.name} { ...item.attrs } { ...defaultAttrs }/>
+                        <input 
+							className="form-input" 
+							type="text" 
+							value={item.attrs.value} 
+							id={item.attrs.name} 
+							{ ...item.attrs } 
+							{ ...defaultAttrs } 
+							data-testid={`edit-input-${item.attrs.name}`}/>
 					</div>
 				)
 			}
-			<button type="submit" className="form-button">Salvar</button>
+			<button type="submit" className="form-button">Save</button>
 		</form>
 
 	);

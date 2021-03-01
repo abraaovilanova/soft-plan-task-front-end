@@ -1,8 +1,8 @@
-import React from "react";
-import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-import { MockedProvider } from '@apollo/client/testing';
-import { COUNTRYS } from '../service/queries';
-import Home from '../components/Home/Home';
+import React from "react"
+import { render, screen, waitFor, fireEvent } from "@testing-library/react"
+import { MockedProvider } from '@apollo/client/testing'
+import { COUNTRYS } from '../service/queries'
+import Home from '../components/Home/Home'
 
 
 // Cria um mock/cobaia de um país.
@@ -28,7 +28,7 @@ const mocks = [
 			}
 		}
 	}
-];
+]
 
 
 describe('Home component', () => {
@@ -43,7 +43,7 @@ describe('Home component', () => {
 
 		)
 
-        await waitFor(() => expect(document.getElementsByClassName("home")).not.toBeNull());
+        await waitFor(() => expect(document.getElementsByClassName("home")).not.toBeNull())
 
 	})
 
@@ -57,6 +57,6 @@ describe('Home component', () => {
 
 		)
 
-		await waitFor(() => expect(document.getElementsByClassName("loader")).not.toBeNull());
+		await waitFor(() => expect(document.getElementsByClassName("loader")).not.toBeNull())
 	})
 })

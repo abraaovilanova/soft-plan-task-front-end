@@ -3,10 +3,8 @@ import { render, screen, waitFor } from "@testing-library/react"
 import { MockedProvider } from '@apollo/client/testing'
 import { contriesItemsVar } from '../service'
 import { COUNTRYS } from '../service/queries'
-import App from '../App';
+import App from '../App'
 
-
-// mock do país
 const dataList = {
 	Country: [
 		{ 
@@ -21,9 +19,9 @@ const dataList = {
 			_id: "661"
 		}
 	]
-};
+}
 
-const mocks = [{ request: { query: COUNTRYS }, result: { data: dataList }}];
+const mocks = [{ request: { query: COUNTRYS }, result: { data: dataList }}]
 
 describe('App component', () => {
 	it('renders App component without errors', async () => {
@@ -44,7 +42,7 @@ describe('App component', () => {
 
 		)
 
-		await waitFor(() => expect(document.getElementsByClassName("loader")).not.toBeNull());
+		await waitFor(() => expect(document.getElementsByClassName("loader")).not.toBeNull())
 
 	})
 
@@ -57,7 +55,7 @@ describe('App component', () => {
 		    </MockedProvider>
 		)
 
-		await waitFor(() => expect(contriesItemsVar()).toEqual(dataList.Country));
+		await waitFor(() => expect(contriesItemsVar()).toEqual(dataList.Country))
 
 	})
 
@@ -68,17 +66,17 @@ describe('App component', () => {
 				query: COUNTRYS
 			},
 			error: new Error('fail')
-		};
+		}
 
 		render(
 			<MockedProvider mocks={[errorMocks]} addTypename={false}>
 		      <App />
 		    </MockedProvider>
 
-		);
+		)
 
-		await waitFor(() => expect(document.getElementsByClassName("error-page")).not.toBeNull());
+		await waitFor(() => expect(document.getElementsByClassName("error-page")).not.toBeNull())
 
-	});
+	})
 	
-});
+})

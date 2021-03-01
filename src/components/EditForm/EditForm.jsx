@@ -6,6 +6,7 @@ import { contriesItemsVar } from '../../service/index'
 import Form from '../Form/Form'
 import './EditForm.css'
 import Error from '../../views/Error'
+import Loader from '../../views/Loader'
 
 export default () => {
     const history = useHistory()
@@ -19,9 +20,9 @@ export default () => {
 	},[getDetails]);
 
 
-	if (error) return <p>Falha :(</p>;
-	if (loading) return <p>Carregando...</p>;
-	if (data === undefined) return <p>Carregando...</p>;
+	if (error) return <Error />
+	if (loading) return <Loader />
+	if (data === undefined) return <Loader />
 	  
   	if (data.details.length === 0) {
 

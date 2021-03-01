@@ -1,8 +1,8 @@
-import React from "react";
-import { Router } from 'react-router-dom';
-import { render, screen } from "@testing-library/react";
-import { createMemoryHistory } from 'history';
-import CardList from "../components/CardList/CardList";
+import React from "react"
+import { Router } from 'react-router-dom'
+import { render, screen } from "@testing-library/react"
+import { createMemoryHistory } from 'history'
+import CardList from "../components/CardList/CardList"
 
 
 const dataList = {
@@ -17,7 +17,7 @@ const dataList = {
 			_id: "661"
 		}
 	]
-};
+}
 
 
 describe("List component", () => {
@@ -34,30 +34,30 @@ describe("List component", () => {
 
 		)
 
-		expect(screen.getByTestId("list")).not.toBeNull();
+		expect(screen.getByTestId("list")).not.toBeNull()
 
 	})
 
 
 	it('shoulds render loading state initially', () => {
 
-		render(<CardList loading={true} />);
-		expect(document.getElementsByClassName("loader")).not.toBeNull();
+		render(<CardList loading={true} />)
+		expect(document.getElementsByClassName("loader")).not.toBeNull()
 
 	})
 
 	it("checks if you didn't find countries", () => {
 
-		render(<CardList loading={false} error={false} data={{list:[]}} />);
-		expect(document.getElementsByClassName("error-page")).not.toBeNull();
+		render(<CardList loading={false} error={false} data={{list:[]}} />)
+		expect(document.getElementsByClassName("error-page")).not.toBeNull()
 
 	})
 
 
 	it("check if date is still undefined", () => {
 
-		render(<CardList loading={false} error={false} />);
-		expect(document.getElementsByClassName("loader")).not.toBeNull();
+		render(<CardList loading={false} error={false} />)
+		expect(document.getElementsByClassName("loader")).not.toBeNull()
 
 	})
 	
